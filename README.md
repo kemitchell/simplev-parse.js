@@ -54,7 +54,11 @@ The simplev for the second draft of `7.2.5` is written:
 assert.deepEqual(
   parse('7.2.5-2'),
   { edition: 7, update: 2, correction: 5, draft: 2 })
+```
 
+Draft numbers start from one and increase from there:
+
+```javascript
 assert.deepEqual(
   parse('7.2.5-0'),
   null)
