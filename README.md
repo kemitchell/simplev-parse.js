@@ -26,6 +26,18 @@ Major cannot be zero, but one or both of minor and fix can.
 assert.deepEqual(
   parse('0.1.1'),
   null)
+
+assert.deepEqual(
+  parse('1.0.1'),
+  { major: 1, minor: 0, fix: 1 })
+
+assert.deepEqual(
+  parse('2.7.0'),
+  { major: 2, minor: 7, fix: 0 })
+
+assert.deepEqual(
+  parse('3.0.0'),
+  { major: 3, minor: 0, fix: 0 })
 ```
 
 Apart from when minor or fix are zero, no number can start with zero.
