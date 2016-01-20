@@ -18,7 +18,7 @@ var re = new RegExp(
     // A dash.
     '-' +
     // Yet another possibly-zero number without leading zeroes.
-    '(0|[1-9][0-9]*)' +
+    '([1-9][0-9]*)' +
   ')?' +
   // No extra stuff at the end.
   '$')

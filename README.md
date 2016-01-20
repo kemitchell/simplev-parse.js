@@ -54,4 +54,8 @@ The simplev for the second draft of `7.2.5` is written:
 assert.deepEqual(
   parse('7.2.5-2'),
   { major: 7, minor: 2, fix: 5, draft: 2 })
+
+assert.deepEqual(
+  parse('7.2.5-0'),
+  null)
 ```
