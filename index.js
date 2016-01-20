@@ -27,9 +27,9 @@ function simplevParse(argument) {
   var match = re.exec(argument)
   if (match) {
     var parsed = {
-      major: match[1],
-      minor: match[2],
-      fix: match[3] }
+      edition: match[1],
+      update: match[2],
+      correction: match[3] }
     if (match[5]) {
       parsed.draft = match[5] }
     return parsed }
