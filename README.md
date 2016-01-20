@@ -1,4 +1,6 @@
-The package exports a single function that takes one string argument and returns an `Object` or `null`.
+simplev is a versioning scheme, like Semantic Versioning, but with simpler syntax and different rules of meaning.
+
+The package exports a single function that takes one simplev string argument and returns an `Object` describing its meaning or `null` if it wasn't a valid simplev.
 
 ```javascript
 var parse = require('simplev-parse')
