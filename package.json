@@ -1,0 +1,14 @@
+{
+  "name": "simplev-parse",
+  "description": "Parse simplev version strings",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "devDependencies": {
+    "defence-cli": "^1.0.5",
+    "replace-require-self": "^1.0.1"
+  },
+  "license": "MIT",
+  "repository": "kemitchell/simplev-parse.js",
+  "scripts": {
+    "test": "cat README.md | defence | replace-require-self | node"
+  }
+}
