@@ -10,5 +10,6 @@
   "repository": "kemitchell/simplev-parse.js",
   "scripts": {
     "test": "cat README.md | defence | replace-require-self | node"
-  }
+  },
+  "version": "1.0.0"
 }
