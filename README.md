@@ -1,28 +1,43 @@
+The package exports a single function that takes one string argument and returns an `Object` or `null`.
+
+```javascript
+var parse = require('simplev-parse')
+```
+
+Every simplev has three numbers separated by periods. The numbers are called "major", "minor", and "fix".
+
 ```javascript
 var assert = require('assert')
-var parse = require('simplev-parse')
 
 assert.deepEqual(
-  parse('1.0.0'),
-  { major: 1, minor: 0, fix: 0 })
-
-assert.deepEqual(
-  parse('7.112.2-3'),
-  { major: 7, minor: 112, fix: 2, draft: 3 })
-
-assert.deepEqual(
-  parse('7.112.2-3'),
-  { major: 7, minor: 112, fix: 2, draft: 3 })
+  parse('1.3.9'),
+  { major: 1, minor: 3, fix: 9 })
 
 assert.deepEqual(
   parse('garbage'),
   null)
+```
 
+Major cannot be zero, but one or both of minor and fix can.
+
+```javascript
 assert.deepEqual(
   parse('0.1.1'),
   null)
+```
 
+Apart from when minor or fix are zero, no number can start with zero.
+
+```javascript
 assert.deepEqual(
-  parse('00.0.0'),
+  parse('1.01.1'),
   null)
+```
+
+The simplev for the second draft of `7.2.5` is written:
+
+```javascript
+assert.deepEqual(
+  parse('7.2.5-2'),
+  { major: 7, minor: 2, fix: 5, draft: 2 })
 ```
