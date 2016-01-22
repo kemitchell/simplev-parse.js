@@ -27,11 +27,11 @@ function simplevParse(argument) {
   var match = re.exec(argument)
   if (match) {
     var parsed = {
-      edition: match[1],
-      update: match[2],
-      correction: match[3] }
+      edition: parseInt(match[1]),
+      update: parseInt(match[2]),
+      correction: parseInt(match[3]) }
     if (match[5]) {
-      parsed.draft = match[5] }
+      parsed.draft = parseInt(match[5]) }
     return parsed }
   else {
     return null } }
